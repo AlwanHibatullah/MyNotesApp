@@ -1,4 +1,4 @@
-package com.alwandroid.mynotesapp;
+package com.alwandroid.consumerapp;
 
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -18,19 +18,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.alwandroid.mynotesapp.db.NoteHelper;
-import com.alwandroid.mynotesapp.entity.Note;
-import com.alwandroid.mynotesapp.helper.MappingHelper;
+//import com.alwandroid.consumerapp.db.NoteHelper;
+import com.alwandroid.consumerapp.entity.Note;
+import com.alwandroid.consumerapp.helper.MappingHelper;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static com.alwandroid.mynotesapp.db.DatabaseContract.NoteColumns.CONTENT_URI;
-import static com.alwandroid.mynotesapp.db.DatabaseContract.NoteColumns.DATE;
-import static com.alwandroid.mynotesapp.db.DatabaseContract.NoteColumns.DESCRIPTION;
-import static com.alwandroid.mynotesapp.db.DatabaseContract.NoteColumns.TITLE;
+import static com.alwandroid.consumerapp.db.DatabaseContract.NoteColumns.CONTENT_URI;
+import static com.alwandroid.consumerapp.db.DatabaseContract.NoteColumns.DATE;
+import static com.alwandroid.consumerapp.db.DatabaseContract.NoteColumns.DESCRIPTION;
+import static com.alwandroid.consumerapp.db.DatabaseContract.NoteColumns.TITLE;
 
 public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText editTitle, editDescription;
@@ -39,7 +39,7 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
     private boolean isEdit = false;
     private Note note;
     private int position;
-    private NoteHelper noteHelper;
+//    private NoteHelper noteHelper;
     private Uri uriWithId;
 
     public static final String EXTRA_NOTE = "extra_note";
@@ -61,7 +61,7 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
         editDescription = findViewById(R.id.edit_description);
         btnSubmit = findViewById(R.id.btn_submit);
 
-        noteHelper = NoteHelper.getInstance(getApplicationContext());
+//        noteHelper = NoteHelper.getInstance(getApplicationContext());
 
         note = getIntent().getParcelableExtra(EXTRA_NOTE);
         if (note != null){

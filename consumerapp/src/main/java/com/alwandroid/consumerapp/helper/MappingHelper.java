@@ -1,9 +1,9 @@
-package com.alwandroid.mynotesapp.helper;
+package com.alwandroid.consumerapp.helper;
 
 import android.database.Cursor;
 
-import com.alwandroid.mynotesapp.db.DatabaseContract;
-import com.alwandroid.mynotesapp.entity.Note;
+import com.alwandroid.consumerapp.db.DatabaseContract;
+import com.alwandroid.consumerapp.entity.Note;
 
 import java.util.ArrayList;
 

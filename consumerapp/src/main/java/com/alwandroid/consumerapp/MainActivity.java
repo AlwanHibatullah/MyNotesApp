@@ -1,10 +1,4 @@
-package com.alwandroid.mynotesapp;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.alwandroid.consumerapp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,11 +11,17 @@ import android.os.HandlerThread;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.alwandroid.mynotesapp.adapter.NoteAdapter;
-import com.alwandroid.mynotesapp.db.DatabaseContract;
-import com.alwandroid.mynotesapp.db.NoteHelper;
-import com.alwandroid.mynotesapp.entity.Note;
-import com.alwandroid.mynotesapp.helper.MappingHelper;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.alwandroid.consumerapp.adapter.NoteAdapter;
+import com.alwandroid.consumerapp.db.DatabaseContract;
+//import com.alwandroid.consumerapp.db.NoteHelper;
+import com.alwandroid.consumerapp.entity.Note;
+import com.alwandroid.consumerapp.helper.MappingHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
     private NoteAdapter adapter;
     private FloatingActionButton fabAdd;
 
-    private NoteHelper noteHelper;
+//    private NoteHelper noteHelper;
 
     private static final String EXTRA_STATE = "extra_state";
 
@@ -82,6 +82,10 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
             if (list != null){
                 adapter.setListNotes(list);
             }
+        }
+
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setTitle("Consumer Notes");
         }
     }
 
@@ -135,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        noteHelper.close();
+//        noteHelper.close();
     }
 
     @Override

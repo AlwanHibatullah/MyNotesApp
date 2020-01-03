@@ -1,4 +1,4 @@
-package com.alwandroid.mynotesapp;
+package com.alwandroid.mynotesapp.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alwandroid.mynotesapp.CustomOnItemClickListener;
+import com.alwandroid.mynotesapp.NoteAddUpdateActivity;
+import com.alwandroid.mynotesapp.R;
 import com.alwandroid.mynotesapp.entity.Note;
 
 import java.util.ArrayList;

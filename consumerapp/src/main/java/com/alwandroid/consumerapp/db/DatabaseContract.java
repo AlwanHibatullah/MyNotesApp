@@ -1,4 +1,4 @@
-package com.alwandroid.mynotesapp.db;
+package com.alwandroid.consumerapp.db;
 
 import android.net.Uri;
 import android.provider.BaseColumns;
